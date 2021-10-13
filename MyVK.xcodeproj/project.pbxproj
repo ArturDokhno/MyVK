@@ -53,7 +53,6 @@
 		75D5A843271323AB0025FE33 /* HeroStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D5A842271323AB0025FE33 /* HeroStats.swift */; };
 		75D9162126EB5C8100CA51C5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9162026EB5C8100CA51C5 /* GradientView.swift */; };
 		75F17B252707266B00B1DFC8 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F17B242707266B00B1DFC8 /* Singleton.swift */; };
-		75F73BA2270E069700FB98CE /* ConversionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F73BA1270E069700FB98CE /* ConversionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,7 +229,6 @@
 		75D5A842271323AB0025FE33 /* HeroStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroStats.swift; sourceTree = "<group>"; };
 		75D9162026EB5C8100CA51C5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		75F17B242707266B00B1DFC8 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
-		75F73BA1270E069700FB98CE /* ConversionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,7 +362,6 @@
 			children = (
 				75D5A844271323B20025FE33 /* Dota */,
 				75890143270CA053001CD868 /* VKLoginController.swift */,
-				75F73BA1270E069700FB98CE /* ConversionTableViewController.swift */,
 				755FCB1E270F2F07007F49BA /* VKViewController.swift */,
 				75D5A83A271312EA0025FE33 /* JsonViewController.swift */,
 			);
@@ -694,7 +691,6 @@
 				759A921626EB92EF003D22BA /* AllGroupTableHeader.swift in Sources */,
 				752F081326D3C5E9001FC5E7 /* FriendsTableViewController.swift in Sources */,
 				750A171F26E91B000064F5BD /* Foto.swift in Sources */,
-				75F73BA2270E069700FB98CE /* ConversionTableViewController.swift in Sources */,
 				756ED06127073E4A00DF6B5A /* CustomTransition.swift in Sources */,
 				755A9E2A2709F2C4009516A4 /* FullScreenViewController.swift in Sources */,
 				75BCF3FF26DD2E6700114741 /* Group.swift in Sources */,
