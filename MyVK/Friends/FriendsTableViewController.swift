@@ -19,6 +19,8 @@ class FriendsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("some content")
     }
     
     override func tableView(
