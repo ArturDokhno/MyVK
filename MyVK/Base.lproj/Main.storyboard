@@ -701,7 +701,6 @@
                         <segue destination="xQD-sU-8J6" kind="relationship" relationship="viewControllers" id="mae-db-h4t"/>
                         <segue destination="vXd-5C-REv" kind="relationship" relationship="viewControllers" id="E2I-cd-obt"/>
                         <segue destination="eyD-gc-YFE" kind="relationship" relationship="viewControllers" id="Mdy-qc-JWr"/>
-                        <segue destination="BTm-Q8-pDD" kind="relationship" relationship="viewControllers" id="4wH-Xr-glA"/>
                         <segue destination="2Lw-wO-vyf" kind="relationship" relationship="viewControllers" id="WZy-OY-n57"/>
                         <segue destination="vkW-bP-3iX" kind="relationship" relationship="viewControllers" id="D7w-uc-mLj"/>
                     </connections>
@@ -886,55 +885,6 @@
             </objects>
             <point key="canvasLocation" x="-557" y="-803"/>
         </scene>
-        <!--Conversion Table View Controller-->
-        <scene sceneID="9Io-jd-IbL">
-            <objects>
-                <tableViewController id="dv2-Kl-e6T" customClass="ConversionTableViewController" customModule="_2l_ArturDokhno" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Umj-C7-8N3">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="conversionCell" id="BlP-2O-WRX">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BlP-2O-WRX" id="x32-5S-Zic">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="dv2-Kl-e6T" id="Dzl-9o-JjL"/>
-                            <outlet property="delegate" destination="dv2-Kl-e6T" id="vY0-Ky-Zhq"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="3Os-aH-bgN"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bws-5Z-5DW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4534" y="-50"/>
-        </scene>
-        <!--Conversion-->
-        <scene sceneID="eJe-CY-YT8">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BTm-Q8-pDD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Conversion" image="eurosign.circle" catalog="system" id="QMo-fT-zvc"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NNH-WY-OwR">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="dv2-Kl-e6T" kind="relationship" relationship="rootViewController" id="lgT-SK-Bkr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RQe-ts-GoX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3608" y="-50"/>
-        </scene>
         <!--VK-->
         <scene sceneID="D0u-ao-SrP">
             <objects>
@@ -980,7 +930,6 @@
         <image name="birst" width="118" height="106"/>
         <image name="circles.hexagonpath" catalog="system" width="128" height="112"/>
         <image name="city" width="118" height="106"/>
-        <image name="eurosign.circle" catalog="system" width="128" height="121"/>
         <image name="gamecontroller" catalog="system" width="128" height="80"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.2" catalog="system" width="128" height="81"/>
