@@ -55,6 +55,9 @@ class DotaViewController: UIViewController, UITableViewDelegate, UITableViewData
                 do {
                 self.heroes = try JSONDecoder().decode([HeroStats].self, from: data!)
                     
+                    let realmHeros = self.heroes.map { RealmHeroDota(hero: $0)}
+                    try RealmService.save(items: realmHeros)
+                    
                     DispatchQueue.main.async {
                         completed()
                     }

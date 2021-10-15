@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,10 @@
 		759E177326F76FB4006A2C84 /* FadingCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E177226F76FB4006A2C84 /* FadingCircleView.swift */; };
 		759EB012270DF98900AF9B1D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759EB002270DF95F00AF9B1D /* Alamofire.framework */; };
 		759EB013270DF98900AF9B1D /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 759EB002270DF95F00AF9B1D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		75A82B7C2719D1430073003E /* RealmHeroDota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A82B7B2719D1430073003E /* RealmHeroDota.swift */; };
+		75A82B8F2719D16F0073003E /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A82B8E2719D16F0073003E /* RealmService.swift */; };
+		75A82B922719D2190073003E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 75A82B912719D2190073003E /* Realm */; };
+		75A82B942719D2190073003E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 75A82B932719D2190073003E /* RealmSwift */; };
 		75B29DCB26DD02C200313C89 /* MyGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B29DCA26DD02C200313C89 /* MyGroupTableViewController.swift */; };
 		75BCF3FA26DD0D0C00114741 /* AllGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCF3F926DD0D0C00114741 /* AllGroupTableViewController.swift */; };
 		75BCF3FD26DD234700114741 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCF3FC26DD234700114741 /* Friends.swift */; };
@@ -211,6 +215,8 @@
 		759E177226F76FB4006A2C84 /* FadingCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadingCircleView.swift; sourceTree = "<group>"; };
 		759EAFF6270DF95F00AF9B1D /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		759EB02E270DFA4A00AF9B1D /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A82B7B2719D1430073003E /* RealmHeroDota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHeroDota.swift; sourceTree = "<group>"; };
+		75A82B8E2719D16F0073003E /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		75B29DCA26DD02C200313C89 /* MyGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewController.swift; sourceTree = "<group>"; };
 		75BCF3F926DD0D0C00114741 /* AllGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupTableViewController.swift; sourceTree = "<group>"; };
 		75BCF3FC26DD234700114741 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
@@ -236,6 +242,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75A82B942719D2190073003E /* RealmSwift in Frameworks */,
+				75A82B922719D2190073003E /* Realm in Frameworks */,
 				755ECC5D270F19A600C815E8 /* SwiftyJSON.framework in Frameworks */,
 				759EB012270DF98900AF9B1D /* Alamofire.framework in Frameworks */,
 			);
@@ -360,6 +368,7 @@
 		75890142270CA021001CD868 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				75A82B8D2719D1600073003E /* Realm */,
 				75D5A844271323B20025FE33 /* Dota */,
 				75890143270CA053001CD868 /* VKLoginController.swift */,
 				755FCB1E270F2F07007F49BA /* VKViewController.swift */,
@@ -410,6 +419,14 @@
 				759EB02E270DFA4A00AF9B1D /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75A82B8D2719D1600073003E /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				75A82B8E2719D16F0073003E /* RealmService.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		75BCF3FB26DD22FB00114741 /* Groups */ = {
@@ -468,6 +485,7 @@
 				75D5A842271323AB0025FE33 /* HeroStats.swift */,
 				75D5A83E2713206D0025FE33 /* DotaViewController.swift */,
 				75D5A840271322D70025FE33 /* HeroViewController.swift */,
+				75A82B7B2719D1430073003E /* RealmHeroDota.swift */,
 			);
 			path = Dota;
 			sourceTree = "<group>";
@@ -489,6 +507,10 @@
 			dependencies = (
 			);
 			name = 12l_ArturDokhno;
+			packageProductDependencies = (
+				75A82B912719D2190073003E /* Realm */,
+				75A82B932719D2190073003E /* RealmSwift */,
+			);
 			productName = 1l_ArturDokhno;
 			productReference = 75C03D8426C90A8A00E034AE /* 12l_ArturDokhno.app */;
 			productType = "com.apple.product-type.application";
@@ -516,6 +538,9 @@
 				Base,
 			);
 			mainGroup = 75C03D7B26C90A8A00E034AE;
+			packageReferences = (
+				75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 75C03D8526C90A8A00E034AE /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -695,7 +720,9 @@
 				755A9E2A2709F2C4009516A4 /* FullScreenViewController.swift in Sources */,
 				75BCF3FF26DD2E6700114741 /* Group.swift in Sources */,
 				75890144270CA053001CD868 /* VKLoginController.swift in Sources */,
+				75A82B7C2719D1430073003E /* RealmHeroDota.swift in Sources */,
 				755FCB1F270F2F07007F49BA /* VKViewController.swift in Sources */,
+				75A82B8F2719D16F0073003E /* RealmService.swift in Sources */,
 				759E177326F76FB4006A2C84 /* FadingCircleView.swift in Sources */,
 				75C03D8A26C90A8A00E034AE /* SceneDelegate.swift in Sources */,
 				75D5A841271322D70025FE33 /* HeroViewController.swift in Sources */,
@@ -901,6 +928,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75A82B912719D2190073003E /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		75A82B932719D2190073003E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		752FA38527136AF500685786 /* VK_ArturDokhno.xcdatamodeld */ = {
