@@ -7,22 +7,14 @@
 
 import RealmSwift
 import UIKit
-
+//@Persisted
 class RealmHeroDota: Object {
-    @objc dynamic var id: String = ""
-    @objc dynamic var localized_name: String = ""
-    @objc dynamic var primary_attr: String = ""
-    @objc dynamic var attack_type: String = ""
-    @objc dynamic var legs: Int = 0
-    @objc dynamic var img: String = ""
-    
-    override class func primaryKey() -> String? {
-        "id"
-    }
-    
-    override class func indexedProperties() -> [String] {
-        ["localized_name", "img" ]
-    }
+    @Persisted(primaryKey: true) var id: String = ""
+    @Persisted(indexed: true) var localized_name: String = ""
+    @Persisted var primary_attr: String = ""
+    @Persisted var attack_type: String = ""
+    @Persisted var legs: Int = 0
+    @Persisted var img: String = ""
 }
 
 extension RealmHeroDota {

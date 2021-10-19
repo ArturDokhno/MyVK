@@ -483,9 +483,9 @@
 			isa = PBXGroup;
 			children = (
 				75D5A842271323AB0025FE33 /* HeroStats.swift */,
+				75A82B7B2719D1430073003E /* RealmHeroDota.swift */,
 				75D5A83E2713206D0025FE33 /* DotaViewController.swift */,
 				75D5A840271322D70025FE33 /* HeroViewController.swift */,
-				75A82B7B2719D1430073003E /* RealmHeroDota.swift */,
 			);
 			path = Dota;
 			sourceTree = "<group>";
