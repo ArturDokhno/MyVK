@@ -7,7 +7,7 @@
 
 import RealmSwift
 import UIKit
-//@Persisted
+
 class RealmHeroDota: Object {
     @Persisted(primaryKey: true) var id: String = ""
     @Persisted(indexed: true) var localized_name: String = ""

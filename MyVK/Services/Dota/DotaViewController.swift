@@ -13,8 +13,7 @@ class DotaViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var tableView: UITableView!
     
     var heroes: Results<RealmHeroDota>?
-//    = [HeroStats]()
-    var heroesNotification: NotificationToken? = nil
+//    var heroes = [HeroStats]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,29 +28,8 @@ class DotaViewController: UIViewController, UITableViewDelegate, UITableViewData
         loadFromRealm()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        heroesNotification?.invalidate()
-    }
-    
     private func loadFromRealm() {
         heroes = try? RealmService.load(typeOf: RealmHeroDota.self)
-        
-        heroesNotification = heroes?.observe(on: .main) { realmChange in
-            switch realmChange {
-            case .initial(let objects):
-                print(objects)
-                break
-            case let .update(realmHero, deletions, insertions, modifications):
-                print(realmHero)
-                print(deletions)
-                print(insertions)
-                print(modifications)
-                break
-            case .error(let error):
-                print(error)
-            }
-        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,26 +45,26 @@ class DotaViewController: UIViewController, UITableViewDelegate, UITableViewData
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        performSegue(withIdentifier: "showDetails", sender: self)
 //    }
-//
+
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if let destination = segue.destination as? HeroViewController {
 //            destination.hero = heroes[(tableView.indexPathForSelectedRow?.row)!]
 //        }
 //    }
-//    
+    
 //    func downloadJSON(completed: @escaping () -> ()) {
-//        
+//
 //        let url = URL(string: "https://api.opendota.com/api/heroStats")
-//        
+//
 //        URLSession.shared.dataTask(with: url!) { data, response, error in
-//            
+//
 //            if error == nil {
 //                do {
 //                self.heroes = try JSONDecoder().decode([HeroStats].self, from: data!)
-//                    
+//
 //                    let realmHeros = self.heroes.map { RealmHeroDota(hero: $0)}
 //                    try RealmService.save(items: realmHeros)
-//                    
+//
 //                    DispatchQueue.main.async {
 //                        completed()
 //                    }
