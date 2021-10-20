@@ -10,7 +10,6 @@
 		750A171F26E91B000064F5BD /* Foto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A171E26E91B000064F5BD /* Foto.swift */; };
 		750A172226E91C2D0064F5BD /* FotoFriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A172126E91C2D0064F5BD /* FotoFriendsCollectionViewCell.swift */; };
 		750A172426E91CE60064F5BD /* FotoFriendsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750A172326E91CE60064F5BD /* FotoFriendsCollectionViewController.swift */; };
-		750C1576271FE2B60083EB46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 750C1565271FE2B60083EB46 /* GoogleService-Info.plist */; };
 		752F081326D3C5E9001FC5E7 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752F081226D3C5E9001FC5E7 /* FriendsTableViewController.swift */; };
 		752FA39C271371CF00685786 /* UserCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FA39A271371CF00685786 /* UserCoreData+CoreDataClass.swift */; };
 		752FA39D271371CF00685786 /* UserCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FA39B271371CF00685786 /* UserCoreData+CoreDataProperties.swift */; };
@@ -189,7 +188,6 @@
 		750A171E26E91B000064F5BD /* Foto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foto.swift; sourceTree = "<group>"; };
 		750A172126E91C2D0064F5BD /* FotoFriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoFriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 		750A172326E91CE60064F5BD /* FotoFriendsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoFriendsCollectionViewController.swift; sourceTree = "<group>"; };
-		750C1565271FE2B60083EB46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		750DFD79271378E9009A82C2 /* v0.01.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v0.01.xcdatamodel; sourceTree = "<group>"; };
 		752F081226D3C5E9001FC5E7 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		752FA38627136AF500685786 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 				162910672156ECFCB633B837 /* Pods-12l_ArturDokhno.debug.xcconfig */,
 				D762BE3478C4D5490C3E6462 /* Pods-12l_ArturDokhno.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -493,7 +490,6 @@
 				75C03D9026C90A8A00E034AE /* Assets.xcassets */,
 				75C03D9226C90A8A00E034AE /* LaunchScreen.storyboard */,
 				75C03D9526C90A8A00E034AE /* Info.plist */,
-				750C1565271FE2B60083EB46 /* GoogleService-Info.plist */,
 				752FA38527136AF500685786 /* VK_ArturDokhno.xcdatamodeld */,
 			);
 			path = MyVK;
@@ -561,7 +557,7 @@
 			);
 			mainGroup = 75C03D7B26C90A8A00E034AE;
 			packageReferences = (
-				75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa.git" */,
+				75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 75C03D8526C90A8A00E034AE /* Products */;
 			projectDirPath = "";
@@ -701,7 +697,6 @@
 				7545E76526E8EA280048D844 /* GroupCell.xib in Resources */,
 				755A9E2E2709F495009516A4 /* FullScreenCollectionViewCell.xib in Resources */,
 				757472E327076DE8006971C8 /* ImageCollectionViewCell.xib in Resources */,
-				750C1576271FE2B60083EB46 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -997,7 +992,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa.git" */ = {
+		75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
 			requirement = {
@@ -1010,12 +1005,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		75A82B912719D2190073003E /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa.git" */;
+			package = 75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = Realm;
 		};
 		75A82B932719D2190073003E /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa.git" */;
+			package = 75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
