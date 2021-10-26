@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import CoreData
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -15,72 +15,129 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var scrollView: UIScrollView!
     
-    let transitionManager = CustomTransition ()
-    
+    private var handler: AuthStateDidChangeListenerHandle?
+    private let transitionManager = CustomTransition ()
     private let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
-    @IBAction func someButton(_ sender: Any) {
-        loadFromCoreData()
-    }
-    
     @IBAction func loginScrean(unwindSegue: UIStoryboardSegue) {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print(error)
+        }
         loginTextField.text = ""
         passwordTextField.text = ""
     }
     
+    @IBAction func loginAnonymously(_ sender: Any) {
+        Auth.auth().signInAnonymously { authResult, error in
+            
+        }
+    }
+    
+    @IBAction func singUp(_ sender: Any) {
+        print("Artur")
+        registerUser()
+    }
+    
     @IBAction func loginButtonPressed(_ sender: Any) {
+        isValid()
+    }
+    
+    func isValid() {
+        guard
+            let userName = loginTextField.text,
+            let password = passwordTextField.text,
+            !userName.isEmpty,
+            !password.isEmpty
+        else {
+            showAlert(
+                title: "Неверные данные",
+                message: "Проверьте Email или пароль")
+            return
+        }
         
-        saveToCoreData()
-        
-        if isValid() {
-            print("Login")
-            performSegue(
-                withIdentifier: "loginSegue",
-                sender: nil)
-        } else {
-            showAlert()
+        Auth.auth().signIn(withEmail: userName,
+                           password: password) { [ weak self ] authResult, authError in
+            if let error = authError {
+                self?.showAlert(title: "Ошибка", message: error.localizedDescription)
+            }
         }
     }
     
-    // MARK: CoreData
-    
-    private func  saveToCoreData() {
-        guard let currentContex = appDelegate?.persistenContainer.viewContext else { return }
-        let user = UserCoreData(context: currentContex)
-        user.id = UUID()
-        user.name = loginTextField.text
-        user.password = passwordTextField.text
-        try? currentContex.save()
-    }
-    
-    private func loadFromCoreData() {
-        guard let currentContex = appDelegate?.persistenContainer.viewContext else { return }
-        do {
-            let users = try currentContex.fetch(UserCoreData.fetchRequest())
-            print(users)
-        } catch {
-            let nsError = error as NSError
-            print("Error with \(nsError.userInfo)")
-        }
-    }
-    
-    private func showAlert() {
+    private func registerUser() {
         let alertController = UIAlertController(
-            title: "Error",
-            message: "Incorrect login or password",
+            title: "Регистрация",
+            message: nil,
             preferredStyle: .alert)
-        let alertItem = UIAlertAction(
-            title: "Close",
-            style: .cancel)
-        { _ in
-            self.loginTextField.text = ""
-            self.passwordTextField.text = ""
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "Email"
         }
-        alertController.addAction(alertItem)
-        present(alertController,
-                animated: true,
-                completion: nil)
+        alertController.addTextField { textField in
+            textField.isSecureTextEntry = true
+            textField.placeholder = "Пароль"
+        }
+        
+        let cancel = UIAlertAction(
+            title: "Выход",
+            style: .cancel)
+        
+        let registration = UIAlertAction(
+            title: "Регистрация",
+            style: .default) { _ in
+                guard
+                    let emailField = alertController.textFields?[0],
+                    let passwordField = alertController.textFields?[1],
+                    let email = emailField.text,
+                    let password = passwordField.text,
+                    !email.isEmpty,
+                    !password.isEmpty
+                else {
+                    self.showAlert(
+                        title: "Некоретные данные",
+                        message: "Исправте их")
+                    return
+                }
+                
+                Auth.auth().createUser(
+                    withEmail: email,
+                    password: password) { [weak self] authData, authError in
+                        if let authError = authError {
+                            self?.showAlert(
+                                title: "Ошибка",
+                                message: authError.localizedDescription)
+                        } else {
+                            Auth.auth().signIn(withEmail: email, password: password)
+                        }
+                    }
+            }
+        alertController.addAction(cancel)
+        alertController.addAction(registration)
+        
+        self.present(alertController, animated: true)
     }
+    
+    private func showAlert(
+        title: String,
+        message: String) {
+            
+            let alertController = UIAlertController(
+                title: title,
+                message: message,
+                preferredStyle: .alert)
+            
+            let alertItem = UIAlertAction(
+                title: "Выйти",
+                style: .cancel) { _ in
+                    self.passwordTextField.text = ""
+                }
+            
+            alertController.addAction(alertItem)
+            present(alertController,
+                    animated: true,
+                    completion: nil)
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +155,16 @@ class LoginViewController: UIViewController {
         
         animateFieldsAppearing()
         animateTitlesAppearing()
+        
+        handler = Auth.auth().addStateDidChangeListener { [ weak self ] auth, user in
+            if user != nil {
+                let navController = UIStoryboard(
+                    name: "Main",
+                    bundle: nil)
+                    .instantiateViewController(withIdentifier: "MainNavController")
+                self?.present(navController, animated: true)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -175,10 +242,6 @@ class LoginViewController: UIViewController {
     
     @objc func hideKeyboard() {
         self.scrollView?.endEditing(true)
-    }
-    
-    func isValid() -> Bool {
-        loginTextField.text == "" && passwordTextField.text == ""
     }
     
     func animateFieldsAppearing() {

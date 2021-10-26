@@ -63,15 +63,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYa-bT-gTf">
-                                        <rect key="frame" x="130.66666666666669" y="378" width="128.66666666666669" height="36"/>
+                                        <rect key="frame" x="130.66666666666669" y="338" width="128.66666666666669" height="30"/>
                                         <color key="backgroundColor" red="0.44705885649999999" green="0.57254904510000004" blue="0.74901962280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Login">
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Login In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gzt-HY-1BH"/>
-                                            <segue destination="DjP-Dm-wpc" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="U7O-9u-Atv"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4tF-Vk-l58">
@@ -84,7 +83,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="avQ-rz-feT">
-                                        <rect key="frame" x="66.333333333333343" y="294" width="257.33333333333326" height="34"/>
+                                        <rect key="frame" x="66.333333333333343" y="274" width="257.33333333333326" height="34"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="bQD-5V-Br4"/>
@@ -92,32 +91,41 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHP-LO-1iM">
-                                        <rect key="frame" x="130" y="564" width="130" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5a-w2-5eM">
+                                        <rect key="frame" x="157.66666666666666" y="383" width="75" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="CoreData">
-                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sing Up">
+                                            <color key="baseForegroundColor" red="0.44705885649999999" green="0.57254904510000004" blue="0.74901962280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="someButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xeo-eg-Ul9"/>
+                                            <action selector="singUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vi5-cT-zRS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ah-Ua-xO4">
+                                        <rect key="frame" x="120" y="685" width="150" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login Anonymously"/>
+                                        <connections>
+                                            <action selector="loginAnonymously:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fz3-9e-GtC"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Umi-2W-26E" secondAttribute="trailing" constant="30" id="4g2-9Y-x9s"/>
                                     <constraint firstItem="Umi-2W-26E" firstAttribute="top" secondItem="RDJ-7L-oyI" secondAttribute="top" constant="100" id="78w-2m-DdW"/>
-                                    <constraint firstItem="avQ-rz-feT" firstAttribute="top" secondItem="4tF-Vk-l58" secondAttribute="bottom" constant="50" id="CoV-Zf-qxj"/>
+                                    <constraint firstItem="avQ-rz-feT" firstAttribute="top" secondItem="4tF-Vk-l58" secondAttribute="bottom" constant="30" id="CoV-Zf-qxj"/>
                                     <constraint firstItem="avQ-rz-feT" firstAttribute="width" secondItem="4tF-Vk-l58" secondAttribute="width" id="LJF-gh-dxk"/>
                                     <constraint firstItem="fYa-bT-gTf" firstAttribute="centerX" secondItem="RDJ-7L-oyI" secondAttribute="centerX" id="M3g-Ut-cVs"/>
-                                    <constraint firstItem="fHP-LO-1iM" firstAttribute="top" secondItem="fYa-bT-gTf" secondAttribute="bottom" constant="150" id="ZGG-AV-pj0"/>
+                                    <constraint firstItem="L5a-w2-5eM" firstAttribute="top" secondItem="fYa-bT-gTf" secondAttribute="bottom" constant="15" id="bUL-UB-8QV"/>
                                     <constraint firstItem="4tF-Vk-l58" firstAttribute="top" secondItem="Umi-2W-26E" secondAttribute="bottom" constant="50" id="e29-W7-VWF"/>
-                                    <constraint firstItem="Jd8-nb-E49" firstAttribute="trailing" secondItem="fHP-LO-1iM" secondAttribute="trailing" constant="130" id="eSh-oL-ieX"/>
                                     <constraint firstAttribute="bottom" secondItem="fYa-bT-gTf" secondAttribute="bottom" constant="15" id="fkv-no-9XJ"/>
+                                    <constraint firstItem="Jd8-nb-E49" firstAttribute="bottom" secondItem="3Ah-Ua-xO4" secondAttribute="bottom" constant="50" id="gBU-R2-DPg"/>
                                     <constraint firstItem="Umi-2W-26E" firstAttribute="centerX" secondItem="RDJ-7L-oyI" secondAttribute="centerX" id="jcM-zg-3X3"/>
                                     <constraint firstItem="avQ-rz-feT" firstAttribute="centerX" secondItem="RDJ-7L-oyI" secondAttribute="centerX" id="l2X-iQ-ssZ"/>
-                                    <constraint firstItem="fYa-bT-gTf" firstAttribute="top" secondItem="avQ-rz-feT" secondAttribute="bottom" constant="50" id="lCM-Gy-GkV"/>
+                                    <constraint firstItem="fYa-bT-gTf" firstAttribute="top" secondItem="avQ-rz-feT" secondAttribute="bottom" constant="30" id="lCM-Gy-GkV"/>
                                     <constraint firstItem="4tF-Vk-l58" firstAttribute="centerX" secondItem="RDJ-7L-oyI" secondAttribute="centerX" id="lcX-sa-8c2"/>
-                                    <constraint firstItem="fHP-LO-1iM" firstAttribute="leading" secondItem="Jd8-nb-E49" secondAttribute="leading" constant="130" id="m7w-Ua-Fhe"/>
+                                    <constraint firstItem="L5a-w2-5eM" firstAttribute="centerX" secondItem="RDJ-7L-oyI" secondAttribute="centerX" id="wLZ-i3-908"/>
+                                    <constraint firstItem="3Ah-Ua-xO4" firstAttribute="centerX" secondItem="RDJ-7L-oyI" secondAttribute="centerX" id="yhX-23-oiy"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="fAq-zC-m8t"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Jd8-nb-E49"/>
@@ -690,7 +698,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="iSW-gD-TUy">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="DjP-Dm-wpc" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainNavController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="DjP-Dm-wpc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="tfx-FL-OBt"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qtU-T5-1tV">
@@ -956,9 +964,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

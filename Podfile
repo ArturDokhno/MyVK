@@ -7,7 +7,8 @@ target '12l_ArturDokhno' do
 
   # Pods for 12l_ArturDokhno
 
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'	
+  pod 'FirebaseCore'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 end

@@ -51,6 +51,7 @@
 		75C03D8F26C90A8A00E034AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C03D8D26C90A8A00E034AE /* Main.storyboard */; };
 		75C03D9126C90A8A00E034AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C03D9026C90A8A00E034AE /* Assets.xcassets */; };
 		75C03D9426C90A8A00E034AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C03D9226C90A8A00E034AE /* LaunchScreen.storyboard */; };
+		75C67CFF27245A7E002E19D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75C67CEE27245A7E002E19D4 /* GoogleService-Info.plist */; };
 		75D5A83B271312EA0025FE33 /* JsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D5A83A271312EA0025FE33 /* JsonViewController.swift */; };
 		75D5A83F2713206D0025FE33 /* DotaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D5A83E2713206D0025FE33 /* DotaViewController.swift */; };
 		75D5A841271322D70025FE33 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D5A840271322D70025FE33 /* HeroViewController.swift */; };
@@ -231,6 +232,7 @@
 		75C03D9026C90A8A00E034AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C03D9326C90A8A00E034AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75C03D9526C90A8A00E034AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75C67CEE27245A7E002E19D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75D5A83A271312EA0025FE33 /* JsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonViewController.swift; sourceTree = "<group>"; };
 		75D5A83E2713206D0025FE33 /* DotaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaViewController.swift; sourceTree = "<group>"; };
 		75D5A840271322D70025FE33 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
@@ -489,6 +491,7 @@
 				75C03D8D26C90A8A00E034AE /* Main.storyboard */,
 				75C03D9026C90A8A00E034AE /* Assets.xcassets */,
 				75C03D9226C90A8A00E034AE /* LaunchScreen.storyboard */,
+				75C67CEE27245A7E002E19D4 /* GoogleService-Info.plist */,
 				75C03D9526C90A8A00E034AE /* Info.plist */,
 				752FA38527136AF500685786 /* VK_ArturDokhno.xcdatamodeld */,
 			);
@@ -697,6 +700,7 @@
 				7545E76526E8EA280048D844 /* GroupCell.xib in Resources */,
 				755A9E2E2709F495009516A4 /* FullScreenCollectionViewCell.xib in Resources */,
 				757472E327076DE8006971C8 /* ImageCollectionViewCell.xib in Resources */,
+				75C67CFF27245A7E002E19D4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
