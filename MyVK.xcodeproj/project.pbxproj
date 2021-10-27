@@ -21,6 +21,8 @@
 		755ECC5D270F19A600C815E8 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755ECC50270F199800C815E8 /* SwiftyJSON.framework */; };
 		755ECC5E270F19A600C815E8 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 755ECC50270F199800C815E8 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		755FCB1F270F2F07007F49BA /* VKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755FCB1E270F2F07007F49BA /* VKViewController.swift */; };
+		75616408272964E8008B7124 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75616407272964E8008B7124 /* GoogleService-Info.plist */; };
+		7561640A27296569008B7124 /* FirebaseDatabaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7561640927296569008B7124 /* FirebaseDatabaseVC.swift */; };
 		756ED06127073E4A00DF6B5A /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756ED06027073E4A00DF6B5A /* CustomTransition.swift */; };
 		757472E227076DE7006971C8 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757472E027076DE7006971C8 /* ImageCollectionViewCell.swift */; };
 		757472E327076DE8006971C8 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757472E127076DE7006971C8 /* ImageCollectionViewCell.xib */; };
@@ -51,7 +53,6 @@
 		75C03D8F26C90A8A00E034AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C03D8D26C90A8A00E034AE /* Main.storyboard */; };
 		75C03D9126C90A8A00E034AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C03D9026C90A8A00E034AE /* Assets.xcassets */; };
 		75C03D9426C90A8A00E034AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C03D9226C90A8A00E034AE /* LaunchScreen.storyboard */; };
-		75C67CFF27245A7E002E19D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75C67CEE27245A7E002E19D4 /* GoogleService-Info.plist */; };
 		75D5A83B271312EA0025FE33 /* JsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D5A83A271312EA0025FE33 /* JsonViewController.swift */; };
 		75D5A83F2713206D0025FE33 /* DotaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D5A83E2713206D0025FE33 /* DotaViewController.swift */; };
 		75D5A841271322D70025FE33 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D5A840271322D70025FE33 /* HeroViewController.swift */; };
@@ -202,6 +203,8 @@
 		755ECC3C270F199700C815E8 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
 		755ECC62270F268E00C815E8 /* FirebaseAnalytics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FirebaseAnalytics.xcframework; path = Firebase/FirebaseAnalytics/FirebaseAnalytics.xcframework; sourceTree = "<group>"; };
 		755FCB1E270F2F07007F49BA /* VKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKViewController.swift; sourceTree = "<group>"; };
+		75616407272964E8008B7124 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7561640927296569008B7124 /* FirebaseDatabaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseVC.swift; sourceTree = "<group>"; };
 		756ED06027073E4A00DF6B5A /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		757472E027076DE7006971C8 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		757472E127076DE7006971C8 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -232,7 +235,6 @@
 		75C03D9026C90A8A00E034AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C03D9326C90A8A00E034AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75C03D9526C90A8A00E034AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75C67CEE27245A7E002E19D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75D5A83A271312EA0025FE33 /* JsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonViewController.swift; sourceTree = "<group>"; };
 		75D5A83E2713206D0025FE33 /* DotaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaViewController.swift; sourceTree = "<group>"; };
 		75D5A840271322D70025FE33 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				75890143270CA053001CD868 /* VKLoginController.swift */,
 				755FCB1E270F2F07007F49BA /* VKViewController.swift */,
 				75D5A83A271312EA0025FE33 /* JsonViewController.swift */,
+				7561640927296569008B7124 /* FirebaseDatabaseVC.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -491,7 +494,7 @@
 				75C03D8D26C90A8A00E034AE /* Main.storyboard */,
 				75C03D9026C90A8A00E034AE /* Assets.xcassets */,
 				75C03D9226C90A8A00E034AE /* LaunchScreen.storyboard */,
-				75C67CEE27245A7E002E19D4 /* GoogleService-Info.plist */,
+				75616407272964E8008B7124 /* GoogleService-Info.plist */,
 				75C03D9526C90A8A00E034AE /* Info.plist */,
 				752FA38527136AF500685786 /* VK_ArturDokhno.xcdatamodeld */,
 			);
@@ -700,7 +703,7 @@
 				7545E76526E8EA280048D844 /* GroupCell.xib in Resources */,
 				755A9E2E2709F495009516A4 /* FullScreenCollectionViewCell.xib in Resources */,
 				757472E327076DE8006971C8 /* ImageCollectionViewCell.xib in Resources */,
-				75C67CFF27245A7E002E19D4 /* GoogleService-Info.plist in Resources */,
+				75616408272964E8008B7124 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,6 +759,7 @@
 				750A172226E91C2D0064F5BD /* FotoFriendsCollectionViewCell.swift in Sources */,
 				757472E227076DE7006971C8 /* ImageCollectionViewCell.swift in Sources */,
 				75BCF3FA26DD0D0C00114741 /* AllGroupTableViewController.swift in Sources */,
+				7561640A27296569008B7124 /* FirebaseDatabaseVC.swift in Sources */,
 				759E176D26F75773006A2C84 /* LoadingIndicatorViewController.swift in Sources */,
 				759E176F26F757E7006A2C84 /* SpinningCircleView.swift in Sources */,
 				75F17B252707266B00B1DFC8 /* Singleton.swift in Sources */,
