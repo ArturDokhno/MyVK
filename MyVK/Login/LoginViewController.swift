@@ -31,12 +31,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginAnonymously(_ sender: Any) {
         Auth.auth().signInAnonymously { authResult, error in
-            
+            guard (authResult?.user) != nil else { return }
         }
     }
     
     @IBAction func singUp(_ sender: Any) {
-        print("Artur")
         registerUser()
     }
     
