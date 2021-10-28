@@ -23,7 +23,6 @@ class FirebaseDatabaseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        database.child("apples").child("count").setValue(88)
         database.child("Artur").child("Age").setValue(29)
         
         database.observe(.value, with: { (snapshot) in
