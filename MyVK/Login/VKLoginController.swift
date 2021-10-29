@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 
 final class VKLoginController: UIViewController {
-
+    
     @IBOutlet var webView: WKWebView! {
         didSet {
             webView.navigationDelegate = self
@@ -28,7 +28,7 @@ final class VKLoginController: UIViewController {
             URLQueryItem(name: "scope", value: "336918"),
             URLQueryItem(name: "response_type", value: "token"),
             URLQueryItem(name: "v", value: "5.130")
-    ]
+        ]
         return urlComp
     }()
     
@@ -39,6 +39,7 @@ final class VKLoginController: UIViewController {
         
         webView.load(request)
     }
+    
 }
 
 extension VKLoginController: WKNavigationDelegate {
@@ -63,11 +64,12 @@ extension VKLoginController: WKNavigationDelegate {
                     dict[key] = value
                     return dict
                 }
+            
             guard let token = parameters["access_token"],
                   let userIDString = parameters["user_id"],
                   let userID = Int(userIDString)
             else { return decisionHandler(.allow) }
-                 
+            
             Singleton.shared.token = token
             Singleton.shared.userID = userID
             
@@ -77,4 +79,5 @@ extension VKLoginController: WKNavigationDelegate {
             
             decisionHandler(.cancel)
         }
+    
 }

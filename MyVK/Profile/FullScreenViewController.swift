@@ -8,7 +8,7 @@
 import UIKit
 
 class FullScreenViewController: UIViewController {
-
+    
     @IBOutlet var collectionView: UICollectionView!
     
     let countCells = 1
@@ -33,9 +33,12 @@ class FullScreenViewController: UIViewController {
                 animated: false)
         }
     }
+    
 }
 
-extension FullScreenViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension FullScreenViewController: UICollectionViewDelegate,
+                                    UICollectionViewDataSource,
+                                    UICollectionViewDelegateFlowLayout {
     
     func collectionView(
         _ collectionView: UICollectionView,
@@ -46,10 +49,10 @@ extension FullScreenViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: identifire,
                 for: indexPath) as! FullScreenCollectionViewCell
+            
             cell.photoView.image =  photoGallary.images[indexPath.item]
             
             return cell
@@ -59,13 +62,13 @@ extension FullScreenViewController: UICollectionViewDelegate, UICollectionViewDa
         _ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let frameVC = collectionView.frame
-        
-        let widthCell = frameVC.width / CGFloat(countCells)
-        let heightCell = widthCell
-        
-        return CGSize(width: widthCell, height: heightCell)
-    }
+            let frameVC = collectionView.frame
+            
+            let widthCell = frameVC.width / CGFloat(countCells)
+            let heightCell = widthCell
+            
+            return CGSize(width: widthCell, height: heightCell)
+        }
+    
 }
 

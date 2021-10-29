@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
         } catch {
             print(error)
         }
+        
         loginTextField.text = ""
         passwordTextField.text = ""
     }
@@ -272,5 +273,6 @@ class LoginViewController: UIViewController {
         },
                        completion: nil)
     }
+    
 }
 

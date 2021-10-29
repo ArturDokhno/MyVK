@@ -7,7 +7,9 @@
 
 import UIKit
 
-class CustomTransition: NSObject, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
+class CustomTransition: NSObject,
+                        UIViewControllerTransitioningDelegate,
+                        UIViewControllerAnimatedTransitioning {
     
     var isPresented = true
     
@@ -15,11 +17,11 @@ class CustomTransition: NSObject, UIViewControllerTransitioningDelegate, UIViewC
         using transitionContext: UIViewControllerContextTransitioning?)
     -> TimeInterval {
         return 0.5
+        
     }
     
     func animateTransition(
         using transitionContext: UIViewControllerContextTransitioning) {
-            
             guard let toView = transitionContext.view(forKey: .to),
                   let fromView = transitionContext.view(forKey: .from)
             else {
@@ -52,6 +54,7 @@ class CustomTransition: NSObject, UIViewControllerTransitioningDelegate, UIViewC
             }) { (isFinished) in
                 transitionContext.completeTransition(isFinished)
             }
+            
         }
     
     func animationController(
@@ -59,7 +62,6 @@ class CustomTransition: NSObject, UIViewControllerTransitioningDelegate, UIViewC
         presenting: UIViewController,
         source: UIViewController) ->
     UIViewControllerAnimatedTransitioning? {
-        
         isPresented = true
         
         return self
@@ -68,9 +70,9 @@ class CustomTransition: NSObject, UIViewControllerTransitioningDelegate, UIViewC
     func animationController(
         forDismissed dismissed: UIViewController) ->
     UIViewControllerAnimatedTransitioning? {
-        
         isPresented = false
         
         return self
     }
+    
 }

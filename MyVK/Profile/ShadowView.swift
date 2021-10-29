@@ -59,22 +59,18 @@ class ShadowView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         setupShadow()
     }
     
     private func setupShadow() {
-        
         layer.shadowColor = shadowColor.cgColor
         layer.shadowRadius = shadowRadius
         layer.shadowOpacity = shadowOpacity
         layer.shadowOffset = shadowOffSet
         
         let cgPath = UIBezierPath(
-            
             roundedRect: bounds,
             byRoundingCorners: [.allCorners],
-            
             cornerRadii: CGSize(
                 width: cornerRadius,
                 height: cornerRadius)).cgPath
@@ -83,7 +79,6 @@ class ShadowView: UIView {
     }
     
     private func setup() {
-        
         addSubview(imageView)
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -100,4 +95,5 @@ class ShadowView: UIView {
         imageView.layer.cornerRadius = cornerRadius
         imageView.clipsToBounds = true
     }
+    
 }

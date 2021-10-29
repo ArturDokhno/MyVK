@@ -19,5 +19,6 @@ class Singleton {
     
     var token: String = ""
     var userID: Int = 0
+    
 }
 

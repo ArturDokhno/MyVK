@@ -8,13 +8,12 @@
 import UIKit
 
 class FullScreenCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate {
-
+    
     @IBOutlet var photoView: UIImageView!
     @IBOutlet var scrollView: UIScrollView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         self.scrollView.delegate = self
         self.scrollView.minimumZoomScale = 1
         self.scrollView.maximumZoomScale = 3.5
@@ -28,7 +27,7 @@ class FullScreenCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate {
         _ scrollView: UIScrollView,
         with view: UIView?,
         atScale scale: CGFloat) {
-            
-        scrollView.zoomScale = 1
-    }
+            scrollView.zoomScale = 1
+        }
+    
 }
