@@ -11,12 +11,12 @@ class AllGroupTableViewController: UITableViewController {
     
     @IBOutlet var tableViewHeader: AllGroupTableHeader!
     
-    let allGroups = [
-        Group(image: UIImage(named: "Школа №38"), name: "Школа №38"),
-        Group(image: UIImage(named: "Анонимный Сургут"), name: "Анонимный Сургут"),
-        Group(image: UIImage(named: "Наш Сургут"), name: "Наш Сургут"),
-        Group(image: UIImage(named: "Фитнес клуб"), name: "Фитнес клуб")
-    ]
+    let allGroups = [Group]()
+//        Group(image: UIImage(named: "Школа №38"), name: "Школа №38"),
+//        Group(image: UIImage(named: "Анонимный Сургут"), name: "Анонимный Сургут"),
+//        Group(image: UIImage(named: "Наш Сургут"), name: "Наш Сургут"),
+//        Group(image: UIImage(named: "Фитнес клуб"), name: "Фитнес клуб")
+//    ]
     
     //    var letters = [Character]()
     //    var groups = [Character: [Group]]()

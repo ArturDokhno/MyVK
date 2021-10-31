@@ -464,14 +464,7 @@
                             <outlet property="delegate" destination="Fif-3h-0fZ" id="N4N-uR-mrw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="K1J-PN-KM9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IpN-s6-NH3">
-                            <color key="tintColor" systemColor="linkColor"/>
-                            <connections>
-                                <segue destination="gmU-zJ-Ogq" kind="show" identifier="" id="f1b-sd-o9r"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="K1J-PN-KM9"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="ICM-TZ-vtg" id="JCD-hN-5bh"/>
@@ -622,7 +615,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hDa-y5-ZRh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ice-rv-laa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3537" y="2292"/>
+            <point key="canvasLocation" x="-5666" y="-803"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jDq-E9-bcz">

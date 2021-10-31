@@ -23,6 +23,8 @@
 		755FCB1F270F2F07007F49BA /* VKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755FCB1E270F2F07007F49BA /* VKViewController.swift */; };
 		75616408272964E8008B7124 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75616407272964E8008B7124 /* GoogleService-Info.plist */; };
 		7561640A27296569008B7124 /* FirebaseDatabaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7561640927296569008B7124 /* FirebaseDatabaseVC.swift */; };
+		756D76CC272EF58A004908B3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D76CB272EF58A004908B3 /* NetworkService.swift */; };
+		756D76D3272F127D004908B3 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 756D76D2272F127D004908B3 /* Nuke */; };
 		756ED06127073E4A00DF6B5A /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756ED06027073E4A00DF6B5A /* CustomTransition.swift */; };
 		757472E227076DE7006971C8 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757472E027076DE7006971C8 /* ImageCollectionViewCell.swift */; };
 		757472E327076DE8006971C8 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 757472E127076DE7006971C8 /* ImageCollectionViewCell.xib */; };
@@ -205,6 +207,7 @@
 		755FCB1E270F2F07007F49BA /* VKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKViewController.swift; sourceTree = "<group>"; };
 		75616407272964E8008B7124 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7561640927296569008B7124 /* FirebaseDatabaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseVC.swift; sourceTree = "<group>"; };
+		756D76CB272EF58A004908B3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		756ED06027073E4A00DF6B5A /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		757472E027076DE7006971C8 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		757472E127076DE7006971C8 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -253,6 +256,7 @@
 				75A82B942719D2190073003E /* RealmSwift in Frameworks */,
 				75A82B922719D2190073003E /* Realm in Frameworks */,
 				755ECC5D270F19A600C815E8 /* SwiftyJSON.framework in Frameworks */,
+				756D76D3272F127D004908B3 /* Nuke in Frameworks */,
 				759EB012270DF98900AF9B1D /* Alamofire.framework in Frameworks */,
 				9091E9319038B54FC045B4D4 /* Pods_12l_ArturDokhno.framework in Frameworks */,
 			);
@@ -373,6 +377,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		756D76CA272EF552004908B3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				756D76CB272EF58A004908B3 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		757472E82709EB10006971C8 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,7 +399,6 @@
 		759A921426EB92C7003D22BA /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				759A921526EB92EF003D22BA /* AllGroupTableHeader.swift */,
 				759A921826EBB4C5003D22BA /* MyGroupSectionHeader.swift */,
 			);
 			path = Header;
@@ -439,6 +450,8 @@
 				755FCB1E270F2F07007F49BA /* VKViewController.swift */,
 				75D5A83A271312EA0025FE33 /* JsonViewController.swift */,
 				7561640927296569008B7124 /* FirebaseDatabaseVC.swift */,
+				75BCF3F926DD0D0C00114741 /* AllGroupTableViewController.swift */,
+				759A921526EB92EF003D22BA /* AllGroupTableHeader.swift */,
 			);
 			path = Draft;
 			sourceTree = "<group>";
@@ -458,7 +471,6 @@
 				7545E76126E8E9E00048D844 /* CellGroup */,
 				759A921426EB92C7003D22BA /* Header */,
 				75B29DCA26DD02C200313C89 /* MyGroupTableViewController.swift */,
-				75BCF3F926DD0D0C00114741 /* AllGroupTableViewController.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -488,6 +500,7 @@
 			children = (
 				752F081426D3CB57001FC5E7 /* Application */,
 				75A21C9E272C361900DD6E56 /* Draft */,
+				756D76CA272EF552004908B3 /* Services */,
 				755C245726E95D42007C8CC8 /* Login */,
 				755C245626E95D21007C8CC8 /* Profile */,
 				7512C85526E8BEC40044794F /* Friends */,
@@ -535,6 +548,7 @@
 			packageProductDependencies = (
 				75A82B912719D2190073003E /* Realm */,
 				75A82B932719D2190073003E /* RealmSwift */,
+				756D76D2272F127D004908B3 /* Nuke */,
 			);
 			productName = 1l_ArturDokhno;
 			productReference = 75C03D8426C90A8A00E034AE /* 12l_ArturDokhno.app */;
@@ -565,6 +579,7 @@
 			mainGroup = 75C03D7B26C90A8A00E034AE;
 			packageReferences = (
 				75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				756D76D1272F127D004908B3 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 75C03D8526C90A8A00E034AE /* Products */;
 			projectDirPath = "";
@@ -767,6 +782,7 @@
 				75D9162126EB5C8100CA51C5 /* GradientView.swift in Sources */,
 				757DED5626EDEE71001614EC /* CollectionViewLayout.swift in Sources */,
 				75BCF3FD26DD234700114741 /* Friends.swift in Sources */,
+				756D76CC272EF58A004908B3 /* NetworkService.swift in Sources */,
 				757472E72709E93C006971C8 /* PhotoGallary.swift in Sources */,
 				7545E76426E8EA280048D844 /* GroupCell.swift in Sources */,
 				75850E7A26EA0397003898E8 /* ProfileViewController.swift in Sources */,
@@ -1001,6 +1017,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		756D76D1272F127D004908B3 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
@@ -1012,6 +1036,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		756D76D2272F127D004908B3 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 756D76D1272F127D004908B3 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
 		75A82B912719D2190073003E /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 75A82B902719D2190073003E /* XCRemoteSwiftPackageReference "realm-cocoa" */;

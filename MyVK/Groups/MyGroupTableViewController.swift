@@ -11,6 +11,8 @@ class MyGroupTableViewController: UITableViewController {
     
     @IBOutlet var searchBar: UISearchBar!
     
+    private let networkService = NetworkService()
+    
     
     var myGroups = [Group]() {
         didSet {
@@ -24,39 +26,6 @@ class MyGroupTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func addGroup(segue: UIStoryboardSegue) {
-        
-        if segue.identifier == "addGroup" {
-            
-            guard let allGroupController = segue.source as?
-                    AllGroupTableViewController else { return }
-            
-            if let indexPath =
-                allGroupController.tableView.indexPathForSelectedRow {
-                
-                let group = allGroupController.allGroups[indexPath.row]
-                
-                if !myGroups.contains(group) {
-                    myGroups.append(group)
-                    
-                    tableView.reloadData()
-                }
-            }
-        }
-    }
-    
-//    override func tableView(
-//        _ tableView: UITableView,
-//        commit editingStyle: UITableViewCell.EditingStyle,
-//        forRowAt indexPath: IndexPath) {
-//
-//        if editingStyle == .delete {
-//
-//            myGroups.remove(at: indexPath.row)
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-//        }
-//    }
-//
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,80 +40,51 @@ class MyGroupTableViewController: UITableViewController {
         tableView.register(
             MyGroupSectionHeader.self,
             forHeaderFooterViewReuseIdentifier: "sectionHeader")
+        
+        networkService.feachGroups { [weak self] groups in
+            guard let groups = groups else { return }
+            self?.myGroups = groups
+        }
     }
-    
-    /*
-     // Kастомный Heater
-     override func tableView(
-     _ tableView: UITableView,
-     viewForHeaderInSection section: Int) -> UIView? {
-     
-     guard let sectionHeader = tableView.dequeueReusableHeaderFooterView(
-     withIdentifier: "sectionHeader") as? MyGroupSectionHeader
-     else { return nil }
-     
-     sectionHeader.contentView.backgroundColor = .systemGray2
-     
-     return sectionHeader
-     }
-     */
     
     override func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
-        
-        filteredMyGroups.count
-    }
+            
+            filteredMyGroups.count
+        }
     
     override func tableView(
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(
+            
+            guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: "customGroupCell",
                 for: indexPath) as? GroupCell
-        
-        else { return UITableViewCell() }
-        
-        cell.configure(group: filteredMyGroups[indexPath.row])
-        
-        return cell
-    }
+                    
+            else { return UITableViewCell() }
+            
+            cell.configure(group: filteredMyGroups[indexPath.row])
+            
+            return cell
+        }
     
     override func tableView(
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath) {
-        
-        defer { tableView.deselectRow(
-            at: indexPath,
-            animated: true)
+            
+            do { tableView.deselectRow(
+                at: indexPath,
+                animated: true)
+            }
         }
-        
-//        performSegue(
-//            withIdentifier: "addGroup",
-//            sender: nil)
-    }
     
     override func tableView(
         _ tableView: UITableView,
         heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        60.0
-    }
-    
-    override func tableView(
-        _ tableView: UITableView,
-        viewForFooterInSection section: Int) -> UIView? {
-        
-        return UIView()
-    }
-    
-    override func tableView(
-        _ tableView: UITableView,
-        titleForHeaderInSection section: Int) -> String? {
-        
-        "All My Group"
-    }
+            
+            60.0
+        }
     
 }
 
@@ -170,20 +110,18 @@ extension MyGroupTableViewController: UISearchBarDelegate {
         _ tableView: UITableView,
         willDisplay cell: UITableViewCell,
         forRowAt indexPath: IndexPath) {
-        
-        let translationTransform = CATransform3DTranslate(
-            CATransform3DIdentity, -500, 400, 0)
-        cell.layer.transform = translationTransform
-        
-        UIView.animate(
-            withDuration: 0.2 * Double(indexPath.row),
-            delay: 0.2,
-            options: .curveEaseInOut,
-            animations: {
-                cell.layer.transform = CATransform3DIdentity
-            })
-    }
+            
+            let translationTransform = CATransform3DTranslate(
+                CATransform3DIdentity, -500, 400, 0)
+            cell.layer.transform = translationTransform
+            
+            UIView.animate(
+                withDuration: 0.2 * Double(indexPath.row),
+                delay: 0.2,
+                options: .curveEaseInOut,
+                animations: {
+                    cell.layer.transform = CATransform3DIdentity
+                })
+        }
     
 }
-
-
