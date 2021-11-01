@@ -8,7 +8,8 @@
 import UIKit
 
 
-final class NetworkService {
+final class GroupGetAPI {
+    
     private let session = URLSession.shared
     
     private let urlComponent: URLComponents = {
@@ -18,7 +19,7 @@ final class NetworkService {
         return component
     }()
     
-    func feachGroups(complection: @escaping ([Group]?) -> Void) {
+    func fetchGroups(complection: @escaping ([Group]?) -> Void) {
         var urlComponent = urlComponent.self
         urlComponent.path = "/method/groups.get"
         urlComponent.queryItems = [

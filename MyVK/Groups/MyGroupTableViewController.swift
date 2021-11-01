@@ -11,8 +11,7 @@ class MyGroupTableViewController: UITableViewController {
     
     @IBOutlet var searchBar: UISearchBar!
     
-    private let networkService = NetworkService()
-    
+    private let networkService = GroupGetAPI()
     
     var myGroups = [Group]() {
         didSet {
@@ -37,11 +36,7 @@ class MyGroupTableViewController: UITableViewController {
         
         searchBar.delegate = self
         
-        tableView.register(
-            MyGroupSectionHeader.self,
-            forHeaderFooterViewReuseIdentifier: "sectionHeader")
-        
-        networkService.feachGroups { [weak self] groups in
+        networkService.fetchGroups { [weak self] groups in
             guard let groups = groups else { return }
             self?.myGroups = groups
         }
@@ -61,7 +56,6 @@ class MyGroupTableViewController: UITableViewController {
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: "customGroupCell",
                 for: indexPath) as? GroupCell
-                    
             else { return UITableViewCell() }
             
             cell.configure(group: filteredMyGroups[indexPath.row])
@@ -85,7 +79,6 @@ class MyGroupTableViewController: UITableViewController {
             
             60.0
         }
-    
 }
 
 extension MyGroupTableViewController: UISearchBarDelegate {
