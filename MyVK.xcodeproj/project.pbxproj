@@ -387,6 +387,7 @@
 		756D76CA272EF552004908B3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				75790BE9273025EA00F9BE3E /* Data+PrettyJSON.swift */,
 				756D76CB272EF58A004908B3 /* GroupGetAPI.swift */,
 				75790BE0272FF5B000F9BE3E /* FriendsGetAPI.swift */,
 			);
@@ -530,7 +531,6 @@
 				75C03D9526C90A8A00E034AE /* Info.plist */,
 				75616407272964E8008B7124 /* GoogleService-Info.plist */,
 				752FA38527136AF500685786 /* VK_ArturDokhno.xcdatamodeld */,
-				75790BE9273025EA00F9BE3E /* Data+PrettyJSON.swift */,
 			);
 			path = MyVK;
 			sourceTree = "<group>";
