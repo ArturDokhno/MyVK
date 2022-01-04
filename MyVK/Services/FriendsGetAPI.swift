@@ -8,7 +8,11 @@
 import Foundation
 import Alamofire
 
-final class FriendsGetAPI {
+protocol FriendsGetAPIProtocol {
+    func getFriends(complition: @escaping ([Friend]?) -> Void)
+}
+
+final class FriendsGetAPI: FriendsGetAPIProtocol {
     
     let baseURL = "https://api.vk.com/method"
     let token = Singleton.shared.token
@@ -41,4 +45,22 @@ final class FriendsGetAPI {
             }
         }
     }
+}
+
+
+
+
+final class FriendsGetAPIProxy: FriendsGetAPIProtocol {
+ 
+    let friendsGetAPI: FriendsGetAPI
+    
+    init(friendsGetAPI: FriendsGetAPI) {
+        self.friendsGetAPI = friendsGetAPI
+    }
+    
+    func getFriends(complition: @escaping ([Friend]?) -> Void) {
+        self.friendsGetAPI.getFriends(complition: complition)
+        print("Вызван метод getFriends")
+    }
+    
 }
