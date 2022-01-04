@@ -211,6 +211,7 @@
 		755FCB1E270F2F07007F49BA /* VKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKViewController.swift; sourceTree = "<group>"; };
 		75616407272964E8008B7124 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7561640927296569008B7124 /* FirebaseDatabaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseVC.swift; sourceTree = "<group>"; };
+		75674352278483CB003493C0 /* Decorator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Decorator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		756D76CB272EF58A004908B3 /* GroupGetAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupGetAPI.swift; sourceTree = "<group>"; };
 		756ED06027073E4A00DF6B5A /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		757472E027076DE7006971C8 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -525,6 +526,7 @@
 				755C245626E95D21007C8CC8 /* Profile */,
 				7512C85526E8BEC40044794F /* Friends */,
 				75BCF3FB26DD22FB00114741 /* Groups */,
+				75674352278483CB003493C0 /* Decorator.playground */,
 				75C03D8D26C90A8A00E034AE /* Main.storyboard */,
 				75C03D9026C90A8A00E034AE /* Assets.xcassets */,
 				75C03D9226C90A8A00E034AE /* LaunchScreen.storyboard */,
